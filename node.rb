@@ -2,16 +2,12 @@ class Node
   @value
   @next
 
+  attr_accessor :next
+  attr_accessor :value
+
   def initialize(n, val)
     @value = val
     @next = n
   end
 
-  def next()
-    return @next
-  end
-
-  def value()
-    return @value
-  end
 end

@@ -9,9 +9,19 @@ end
 def test_push
   #test pushing nodes onto list
   list = LinkedList.new()
-  list.push("hi")
-  list.push("there")
-  list.to_s
+  list.push("Mask")
+  list.push("Majora's")
+  list.push("Zelda")
+  list.push("Legend")
+  list.push("The")
+  puts list.to_s
+
+  unless list.length != 5
+    puts "push test passed"
+  else
+    puts "push test failed, length is " + list.length.to_s
+  end
+
 end
 
 def test_pop
@@ -23,8 +33,8 @@ def test_pop
     i+=1
   end
 
-  i = 0
-  until i == 5
+  i = 1
+  until i > 5
     list.pop
     i+=1
   end
@@ -32,21 +42,23 @@ def test_pop
   unless list.length != 5
     puts "pop test passed"
   else
-    puts "pop test failed"
+    puts "pop test failed, length is " + list.length.to_s
   end
 end
 
 def test_append
   list = LinkedList.new()
   i = 0
-  while i < 10
+  until i == 10
     list.append(i)
+    puts list.to_s
+    i += 1
   end
 
   unless list.length != 10
     puts "append test passed"
   else
-    puts "append test failed"
+    puts "append test failed, length is" + list.length.to_s
   end
 end
 
